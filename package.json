@@ -1,15 +1,28 @@
 {
   "name": "flashbitacora",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src -d public/js",
+    "start": "node server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Tahirih - Vanesa",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vaneshita/flash-bitacora.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vaneshita/flash-bitacora/issues"
+  },
+  "homepage": "https://github.com/vaneshita/flash-bitacora#readme",
+  "description": "",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
   }
 }
