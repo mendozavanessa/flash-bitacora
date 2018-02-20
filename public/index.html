@@ -26,33 +26,33 @@
         </div>
       </div>
     </section>
-      <div class="fixed-action-btn horizontal">
-          <a class="btn-floating btn-large red">
-            <i class="large material-icons">mode_edit</i>
+    <div class="fixed-action-btn horizontal">
+      <a class="btn-floating btn-large red">
+        <i class="large material-icons">mode_edit</i>
+      </a>
+      <ul>
+        <li>
+          <a class="btn-floating red btn modal-trigger" href="#msg">
+            <i class="material-icons">comment</i>
           </a>
-          <ul>
-            <li>
-              <a class="btn-floating red btn modal-trigger" href="#msg">
-                <i class="material-icons">comment</i>
-              </a>
-            </li>
-            <li>
-              <a class="btn-floating yellow darken-1 btn modal-trigger" href="#img">
-                <i class="material-icons">image</i>
-              </a>
-            </li>
-            <li>
-              <a class="btn-floating green btn modal-trigger" href="#evn">
-                <i class="material-icons">event_note</i>
-              </a>
-            </li>
-            <li>
-              <a class="btn-floating blue btn modal-trigger" href="#mp3">
-                <i class="material-icons">video_library</i>
-              </a>
-            </li>
-          </ul>
-        </div>
+        </li>
+        <li>
+          <a class="btn-floating yellow darken-1 btn modal-trigger" href="#img">
+            <i class="material-icons">image</i>
+          </a>
+        </li>
+        <li>
+          <a class="btn-floating green btn modal-trigger" href="#evn">
+            <i class="material-icons">event_note</i>
+          </a>
+        </li>
+        <li>
+          <a class="btn-floating blue btn modal-trigger" href="#mp3">
+            <i class="material-icons">video_library</i>
+          </a>
+        </li>
+      </ul>
+    </div>
   </main>
   <!-- modales -->
   <!-- mensaje -->
@@ -98,7 +98,7 @@
         </div>
       </form>
       <div class="preview-image">
-        </div>
+      </div>
     </div>
     <div class="modal-footer">
       <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" id="btn-img">Agregar</a>
@@ -109,16 +109,20 @@
     <div class="modal-content">
       <form>
         <div class="input-field col s6">
-          <input id="input_text" type="text" data-length="15">
-          <label for="input_text">Evento</label>
+          <input id="value-evn" type="text" data-length="15">
+          <label for="value-evn">Evento</label>
         </div>
         <div class="col s12">
-          <input type="text" class="datepicker">
+          <input type="text" class="datepicker" id="date-val">
         </div>
+
       </form>
+      <div id="map">
+
+      </div>
     </div>
     <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agregar</a>
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" id="btn-evn">Agregar</a>
     </div>
   </div>
   <!-- audio y video -->
@@ -126,13 +130,13 @@
     <div class="modal-content">
       <form action="#">
         <div class="input-field col s6">
-          <input id="input_text" type="text" data-length="15">
-          <label for="input_text">Audio o video</label>
+          <input id="title-media" type="text" data-length="15">
+          <label for="title-media">Audio o video</label>
         </div>
         <div class="file-field input-field">
           <div class="btn">
             <span>Audio o video</span>
-            <input type="file">
+            <input type="file" id="id-media">
           </div>
           <div class="file-path-wrapper">
             <input class="file-path validate" type="text">
@@ -141,11 +145,12 @@
       </form>
     </div>
     <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agregar</a>
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" id="id-mp3">Agregar</a>
     </div>
   </div>
   <script type="text/javascript" src="vendors/jquery/jquery-3.2.1.min.js"></script>
   <script src="vendors/materialize/js/materialize.min.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCixjXpBUTGEJpM4-_bwX5B80jWrvZDsfQ&callback=initMap"></script>
   <script type="text/javascript" src="js/app.js"></script>
 </body>
 
