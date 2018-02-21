@@ -44,8 +44,7 @@ $(document).ready(function() {
     reader.onload = function(event) {
       var urlImg = event.target.result;
       localStorage.url = urlImg;
-      var size = file.size / Math.pow(1024, 2);
-      preview.html('<img src=\'' + urlImg + '\' /><br>' + file.name + '<br>' + size.toFixed(2) + 'MB');
+      preview.html(`<img class="preview-image" src="${urlImg}" />`);
     };
     reader.readAsDataURL(file);
   }

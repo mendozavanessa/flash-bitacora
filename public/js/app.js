@@ -35,8 +35,7 @@ $(document).ready(function () {
     reader.onload = function (event) {
       var urlImg = event.target.result;
       localStorage.url = urlImg;
-      var size = file.size / Math.pow(1024, 2);
-      preview.html('<img src=\'' + urlImg + '\' /><br>' + file.name + '<br>' + size.toFixed(2) + 'MB');
+      preview.html('<img class="preview-image" src="' + urlImg + '" />');
     };
     reader.readAsDataURL(file);
   }
@@ -48,6 +47,7 @@ $(document).ready(function () {
 
   var addImg = function addImg() {
     var imgU = localStorage.url;
+    console.log(imgU);
     if (valImg) {
       var addImages = ' \n      <div class="row">\n          <div class="col s12 m6">\n            <div class="card">\n              <div class="card-image">\n                <img src="' + imgU + '">\n                <span class="card-title">' + valueTitleImg.val() + '</span>\n              </div>\n            </div>\n          </div>\n        </div>\n      ';
       containerMsg.html(addImages);
