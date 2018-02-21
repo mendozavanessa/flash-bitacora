@@ -22,7 +22,7 @@ $(document).ready(function () {
   // obtiene texto
   var addMsg = function addMsg() {
     if (valueTitleMsg.val() !== '' && valueTextMsg.val() !== '') {
-      var addMessage = '\n      <div class="row">\n        <div class="col s12 m6">\n          <div class="card deep-orange lighten-5">\n            <div class="card-content text-darken-2">\n              <span class="card-title">' + valueTitleMsg.val() + '</span>\n              <p>' + valueTextMsg.val() + '</p>\n            </div>\n          </div>\n        </div>\n      </div>\n    ';
+      var addMessage = '\n        <div class="col s12 m12 l8 offset-l2">\n          <div class="card">\n            <div class="card-content text-darken-2">\n              <span class="card-title">' + valueTitleMsg.val() + '</span>\n              <p>' + valueTextMsg.val() + '</p>\n            </div>\n          </div>\n        </div>\n    ';
       valueTitleMsg.val('');
       valueTextMsg.val('');
       containerMsg.append(addMessage);
@@ -56,7 +56,7 @@ $(document).ready(function () {
     var imgU = localStorage.url;
     console.log(imgU);
     if (valImg) {
-      var addImages = ' \n      <div class="row">\n          <div class="col s12 m6">\n            <div class="card">\n              <div class="card-image">\n                <img src="' + imgU + '">\n                <span class="card-title">' + valueTitleImg.val() + '</span>\n              </div>\n            </div>\n          </div>\n        </div>\n      ';
+      var addImages = ' \n          <div class="col s12 m12 l8 offset-l2">\n            <div class="card">\n              <div class="card-image">\n                <img src="' + imgU + '">\n              </div>\n              <span class="card-title">' + valueTitleImg.val() + '</span>\n            </div>\n          </div>\n      ';
       containerMsg.append(addImages);
     }
   };
@@ -87,11 +87,11 @@ $(document).ready(function () {
     var media = void 0;
     if (localStorage.urlAudio) {
       if (localStorage.type === 'video') {
-        media = ' \n        <div class="row">\n        <div class="col s12">\n          <div class="card-panel">\n            <div class="card-content">\n              <p class="title">' + title.val() + '</p>\n            </div>\n            <video class="responsive-video" src="' + localStorage.urlAudio + '" controls></video>\n          </div>\n        </div>\n      </div>\n        ';
+        media = ' \n        <div class="col s12 m12 l8 offset-l2">\n          <div class="card-panel">\n            <div class="card-content">\n              <p class="title">' + title.val() + '</p>\n            </div>\n            <video class="responsive-video" src="' + localStorage.urlAudio + '" controls></video>\n          </div>\n        </div>\n        ';
         containerMsg.append(media);
       }
       if (localStorage.type === 'audio') {
-        media = ' \n        <div class="row">\n        <div class="col s12">\n          <div class="card-panel">\n            <div class="card-content">\n              <p class="title">' + title.val() + '</p>\n            </div>\n            <audio src="' + localStorage.urlAudio + '" controls></audio>\n          </div>\n        </div>\n      </div>\n    ';
+        media = ' \n        <div class="col s12 m12 l8 offset-l2">\n          <div class="card-panel">\n            <div class="card-content">\n              <p class="title">' + title.val() + '</p>\n            </div>\n            <audio src="' + localStorage.urlAudio + '" controls></audio>\n          </div>\n        </div>\n    ';
         containerMsg.append(media);
       }
     }
@@ -140,7 +140,7 @@ var addDate = function addDate() {
   var titledate = $('#value-evn');
   var dateVal = $('#date-val');
   if (titledate.val() !== '' && dateVal.val() !== '') {
-    var event = '\n    <div class="row">\n    <div class="col s12 m6">\n      <div class="card">\n        <div class="card-image">\n          <div id="map"">\n          </div>\n        </div>\n        <div class="card-content">\n          <h4>' + titledate.val() + '</h4>\n          <p>' + dateVal.val() + '</p>\n        </div>\n      </div>\n    </div>\n  </div>\n   \n  ';
+    var event = '\n    <div class="col s12 m12 l8 offset-l2">\n      <div class="card">\n        <div class="card-image">\n          <div id="map"">\n          </div>\n        </div>\n        <div class="card-content">\n          <h4>' + titledate.val() + '</h4>\n          <p>' + dateVal.val() + '</p>\n        </div>\n      </div>\n    </div>   \n  ';
     $('#container-msg').append(event);
   } else {
     alert('todo los campos son requeridos');

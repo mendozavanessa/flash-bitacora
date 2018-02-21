@@ -21,16 +21,14 @@ $(document).ready(function() {
   let addMsg = () => {
     if (valueTitleMsg.val() !== '' && valueTextMsg.val() !== '') {
       const addMessage = `
-      <div class="row">
-        <div class="col s12 m6">
-          <div class="card deep-orange lighten-5">
+        <div class="col s12 m12 l8 offset-l2">
+          <div class="card">
             <div class="card-content text-darken-2">
               <span class="card-title">${valueTitleMsg.val()}</span>
               <p>${valueTextMsg.val()}</p>
             </div>
           </div>
         </div>
-      </div>
     `;  
       valueTitleMsg.val('');
       valueTextMsg.val('');  
@@ -66,16 +64,14 @@ $(document).ready(function() {
     console.log(imgU);
     if (valImg) {
       const addImages = ` 
-      <div class="row">
-          <div class="col s12 m6">
+          <div class="col s12 m12 l8 offset-l2">
             <div class="card">
               <div class="card-image">
                 <img src="${imgU}">
-                <span class="card-title">${valueTitleImg.val()}</span>
               </div>
+              <span class="card-title">${valueTitleImg.val()}</span>
             </div>
           </div>
-        </div>
       `;
       containerMsg.append(addImages);
     }
@@ -83,10 +79,10 @@ $(document).ready(function() {
 
   let playAudio = (file, type) => {
     let urlAudio = URL.createObjectURL(file);
-    console.log(urlAudio  + 'soy una url');
+    console.log(urlAudio + 'soy una url');
     localStorage.urlAudio = urlAudio;
     localStorage.type = type;
-  }
+  };
 
   valueMedia.change(function() {
     let type;
@@ -107,9 +103,8 @@ $(document).ready(function() {
     let media;
     if (localStorage.urlAudio) {
       if (localStorage.type === 'video') {
-      media = ` 
-        <div class="row">
-        <div class="col s12">
+        media = ` 
+        <div class="col s12 m12 l8 offset-l2">
           <div class="card-panel">
             <div class="card-content">
               <p class="title">${title.val()}</p>
@@ -117,14 +112,12 @@ $(document).ready(function() {
             <video class="responsive-video" src="${localStorage.urlAudio}" controls></video>
           </div>
         </div>
-      </div>
         `;
         containerMsg.append(media);
       }
       if (localStorage.type === 'audio') {
-       media = ` 
-        <div class="row">
-        <div class="col s12">
+        media = ` 
+        <div class="col s12 m12 l8 offset-l2">
           <div class="card-panel">
             <div class="card-content">
               <p class="title">${title.val()}</p>
@@ -132,13 +125,11 @@ $(document).ready(function() {
             <audio src="${localStorage.urlAudio}" controls></audio>
           </div>
         </div>
-      </div>
     `;
-    containerMsg.append(media);
-      }        
-
+        containerMsg.append(media);
+      }
     }
-  }
+  };
   
   $('#btn-msg').on('click', addMsg);
   $('#btn-img').on('click', addImg);
@@ -175,10 +166,10 @@ function initMap() {
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-infoWindow.setPosition(pos);
-infoWindow.setContent(browserHasGeolocation ?
-  'Error: The Geolocation service failed.' :
-  'Error: Your browser doesn\'t support geolocation.');
+  infoWindow.setPosition(pos);
+  infoWindow.setContent(browserHasGeolocation ?
+    'Error: The Geolocation service failed.' :
+    'Error: Your browser doesn\'t support geolocation.');
 }
 
 let addDate = () => {
@@ -186,8 +177,7 @@ let addDate = () => {
   let dateVal = $('#date-val');
   if (titledate.val() !== '' && dateVal.val() !== '') {
     let event = `
-    <div class="row">
-    <div class="col s12 m6">
+    <div class="col s12 m12 l8 offset-l2">
       <div class="card">
         <div class="card-image">
           <div id="map"">
@@ -198,9 +188,7 @@ let addDate = () => {
           <p>${dateVal.val()}</p>
         </div>
       </div>
-    </div>
-  </div>
-   
+    </div>   
   `;
     $('#container-msg').append(event);
   } else {

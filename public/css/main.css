@@ -1,17 +1,9 @@
-body {
-  background-image: url('../assets/img/20.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh;
+body  {
+  background-color: #fafafa;
 }
 
 .preview-image img {
   width: 5em;
-}
-
-span.card-title {
-  background-color: rgba(0,0,0,0.5);
 }
 
 #map {
