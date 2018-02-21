@@ -10,3 +10,11 @@ body {
   width: 5em;
 }
 
+span.card-title {
+  background-color: rgba(0,0,0,0.5);
+}
+
+#map {
+  height: 200px;
+}
+
